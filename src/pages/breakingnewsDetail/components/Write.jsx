@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { addComment } from '../../../redux/comment';
 import { showComment } from '../../../redux/show';
@@ -30,16 +31,18 @@ function Write(props) {
 
 
     const sbmHandler = (e) => {
-        const newcomment = {
-            index: Math.random(),
-            id: name,
-            content: text
-        }
+        // const newcomment = {
+        //     index: Math.random(),
+        //     id: name,
+        //     content: text
+        // }
         e.preventDefault();
-        dispatch(addComment(newcomment))
-        dispatch(showComment());
-        console.log(comment);
+        // dispatch(addComment(newcomment))
+        // dispatch(showComment());
+        // console.log(comment);
+
     };
+
 
     return (
         <div className={classes.container}>
